@@ -1,0 +1,8 @@
+streamlit
+Pillow
+numpy
+tensorflow
+opencv-python
+keras
+pywavelets
+joblib
