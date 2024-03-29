@@ -2,7 +2,7 @@ streamlit
 Pillow
 numpy
 tensorflow
-opencv-python
+opencv-python-headless
 keras
 pywavelets
 joblib
