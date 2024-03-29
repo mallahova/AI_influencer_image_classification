@@ -10,8 +10,8 @@ from keras import layers
 import pywt
 import joblib
 
-model_cnn=tf.keras.layers.TFSMLayer('models/4/', call_endpoint='serving_default')
-# model_cnn = tf.keras.models.load_model("models/4/")
+# model_cnn=tf.keras.layers.TFSMLayer('models/4/', call_endpoint='serving_default')
+model_cnn = tf.keras.models.load_model("models/4")
 model_lr = joblib.load("model.pkl")
 influencer_images = [
     "source/Andrew_Ng.jpg",
