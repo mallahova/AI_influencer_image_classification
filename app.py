@@ -6,7 +6,6 @@ import tensorflow as tf
 import numpy as np
 import tensorflow as tf
 import cv2
-import json
 from keras import layers
 import pywt
 import joblib
