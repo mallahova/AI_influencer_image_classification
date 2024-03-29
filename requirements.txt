@@ -1,7 +1,7 @@
 streamlit
 Pillow
 numpy
-tensorflow
+tensorflow==2.14.0
 opencv-python-headless
 keras
 pywavelets
