@@ -84,12 +84,6 @@ def predict_lr(img_input):
     else:
         return "Face not detected"
 
-
-resize_and_rescale = tf.keras.Sequential(
-    [layers.experimental.preprocessing.Resizing(256, 256)]
-)
-
-
 def predict_cnn(img_input):
     img_input = np.array(img_input)
     gray = cv2.cvtColor(img_input, cv2.COLOR_BGR2GRAY)
@@ -101,7 +95,7 @@ def predict_cnn(img_input):
             eyes = eye_cascade.detectMultiScale(roi_gray)
             if len(eyes) >= 2:
                 img = roi_color
-                img = resize_and_rescale(img)
+                img = cv2.resize(img, (256, 256))
                 img_array = tf.keras.preprocessing.image.img_to_array(img)
                 img_array = tf.expand_dims(img_array, 0)
                 predictions = model_cnn.predict(img_array)
